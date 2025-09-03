@@ -1,0 +1,181 @@
+{
+  "services": [
+    {
+      "name": "Nginx Reverse Proxy",
+      "port": 80,
+      "domain": null,
+      "project_path": null,
+      "status": "active",
+      "type": "system",
+      "description": "Main reverse proxy server"
+    },
+    {
+      "name": "Sammuthu Dev Site",
+      "port": 3355,
+      "domain": "sammuthu.dev",
+      "project_path": "/Users/sammuthu/Projects/sammuthu-dev-site",
+      "start_command": "./start.sh",
+      "status": "configured",
+      "type": "nextjs",
+      "description": "Personal portfolio site"
+    },
+    {
+      "name": "Onyx Web Interface",
+      "port": 5000,
+      "domain": "onyx.local",
+      "project_path": "/Users/sammuthu/Projects/onyx-custom-config",
+      "start_command": "docker-compose up",
+      "status": "docker",
+      "type": "docker",
+      "description": "Onyx web UI (nginx in Docker)"
+    },
+    {
+      "name": "MinIO Console",
+      "port": 5001,
+      "domain": "minio.local",
+      "project_path": "/Users/sammuthu/Projects/onyx-custom-config",
+      "status": "docker",
+      "type": "docker",
+      "description": "MinIO management console"
+    },
+    {
+      "name": "Onyx API Server",
+      "port": 5008,
+      "domain": "api.onyx.local",
+      "project_path": "/Users/sammuthu/Projects/onyx-custom-config",
+      "status": "docker",
+      "type": "docker",
+      "description": "Onyx backend API"
+    },
+    {
+      "name": "MinIO API",
+      "port": 5009,
+      "domain": null,
+      "project_path": "/Users/sammuthu/Projects/onyx-custom-config",
+      "status": "docker",
+      "type": "docker",
+      "description": "MinIO S3-compatible API"
+    },
+    {
+      "name": "Vespa Index",
+      "port": 5019,
+      "domain": "vespa.local",
+      "project_path": "/Users/sammuthu/Projects/onyx-custom-config",
+      "status": "docker",
+      "type": "docker",
+      "description": "Vespa search engine"
+    },
+    {
+      "name": "Redis Cache",
+      "port": 5379,
+      "domain": null,
+      "project_path": "/Users/sammuthu/Projects/onyx-custom-config",
+      "status": "docker",
+      "type": "docker",
+      "description": "Redis cache server"
+    },
+    {
+      "name": "PostgreSQL",
+      "port": 5433,
+      "domain": null,
+      "project_path": "/Users/sammuthu/Projects/onyx-custom-config",
+      "status": "docker",
+      "type": "docker",
+      "description": "PostgreSQL database"
+    },
+    {
+      "name": "CosmicBoard",
+      "port": 7777,
+      "domain": "cosmic.board",
+      "project_path": "/Users/sammuthu/Projects/cosmicboard",
+      "start_command": "npm run dev",
+      "status": "active",
+      "type": "nextjs",
+      "description": "Task management application with AI features"
+    },
+    {
+      "name": "CosmicBoard Mobile",
+      "port": 8081,
+      "domain": null,
+      "project_path": "/Users/sammuthu/Projects/cosmicboard-mobile",
+      "start_command": "npm start",
+      "status": "not_configured",
+      "type": "expo",
+      "description": "React Native mobile app for CosmicBoard",
+      "notes": "Expo typically uses port 8081, needs configuration"
+    },
+    {
+      "name": "Segment Loop Master Frontend",
+      "port": 8088,
+      "domain": "loopify.sam,loopify.dev",
+      "project_path": "/Users/sammuthu/Projects/segment-loop-master",
+      "start_command": "./local-start.sh",
+      "status": "active",
+      "type": "python",
+      "description": "Segment Loop Master web interface"
+    },
+    {
+      "name": "Segment Loop Master Backend",
+      "port": 9001,
+      "domain": null,
+      "project_path": "/Users/sammuthu/Projects/segment-loop-master",
+      "status": "active",
+      "type": "fastapi",
+      "description": "Segment Loop Master API backend"
+    },
+    {
+      "name": "Prism AI",
+      "port": 9393,
+      "domain": "prism.ai",
+      "project_path": null,
+      "status": "configured",
+      "type": "service",
+      "description": "AI service interface (configured in nginx)"
+    },
+    {
+      "name": "Ollama API",
+      "port": 11434,
+      "domain": null,
+      "project_path": null,
+      "status": "system",
+      "type": "system",
+      "description": "Local LLM API service"
+    },
+    {
+      "name": "Zen Algorithms Web",
+      "port": null,
+      "domain": null,
+      "project_path": "/Users/sammuthu/Projects/zen-algorithms",
+      "start_command": "pnpm dev:web",
+      "status": "not_configured",
+      "type": "pnpm_workspace",
+      "description": "Zen Algorithms web interface",
+      "notes": "Port not yet assigned"
+    },
+    {
+      "name": "Zen Algorithms API",
+      "port": null,
+      "domain": null,
+      "project_path": "/Users/sammuthu/Projects/zen-algorithms",
+      "start_command": "pnpm dev:api",
+      "status": "not_configured",
+      "type": "pnpm_workspace",
+      "description": "Zen Algorithms API",
+      "notes": "Port not yet assigned"
+    }
+  ],
+  "reserved_ports": [
+    22, 25, 53, 80, 110, 143, 443, 445, 587, 993, 995, 
+    3306, 5432, 6379, 8080, 8443, 27017
+  ],
+  "available_port_ranges": [
+    {"start": 3000, "end": 3999, "description": "Frontend applications"},
+    {"start": 4000, "end": 4999, "description": "Development servers"},
+    {"start": 5000, "end": 5999, "description": "Docker services"},
+    {"start": 6000, "end": 6999, "description": "Custom services"},
+    {"start": 7000, "end": 7999, "description": "Application servers"},
+    {"start": 8000, "end": 8999, "description": "Web servers"},
+    {"start": 9000, "end": 9999, "description": "API servers"}
+  ],
+  "last_updated": "2025-09-03T00:00:00Z"
+}
